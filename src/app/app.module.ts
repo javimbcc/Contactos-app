@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
 import { DetalleContactosComponent } from './components/detalle-contactos/detalle-contactos.component';
 import { DisplayerComponent } from './components/displayer/displayer.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DisplayerComponent } from './components/displayer/displayer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
