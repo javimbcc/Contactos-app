@@ -9,10 +9,14 @@ export class ContactosService {
   constructor(private http: HttpClient) {}
 
   getContactos() {
-    return this.http.get<any>("https://reqres.in/api/users?page=2");
+    return this.http.get<any>("https://reqres.in/api/users");
   }
 
   getDetail(id: number) {
     return this.http.get<any>(`https://reqres.in/api/users/${id}`);
+  }
+
+  postContacto() {
+
   }
 }
