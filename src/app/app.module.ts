@@ -7,7 +7,6 @@ import { ListaContactosComponent } from './components/lista-contactos/lista-cont
 import { DetalleContactosComponent } from './components/detalle-contactos/detalle-contactos.component';
 import { DisplayerComponent } from './components/displayer/displayer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CrearContactoComponent } from './components/crear-contacto/crear-contacto.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { CrearContactoComponent } from './components/crear-contacto/crear-contac
     ListaContactosComponent,
     DetalleContactosComponent,
     DisplayerComponent,
-    CrearContactoComponent
   ],
   imports: [
     BrowserModule,

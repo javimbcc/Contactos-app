@@ -11,18 +11,21 @@ import { ContactosService } from "../../services/contactos.service";
 export class DetalleContactosComponent implements OnInit {
   constructor(
     private cService: ContactosService,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {}
 
   listaContactos?: contactos;
-
-
-  ngOnInit(): void {
+    //metodo para recoger los detalles de los contactos
+  getContactos() {
     this.route.paramMap.subscribe((params) => {
       let id = Number(params.get("id"));
       this.cService.getDetail(id).subscribe((resp: any) => {
         this.listaContactos = resp.data;
       });
     });
+  }
+
+  ngOnInit(): void {
+    this.getContactos();
   }
 }

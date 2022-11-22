@@ -12,6 +12,7 @@ export class ListaContactosComponent implements OnInit {
 
   listaContactos: any[] = [];
 
+  //metodo para coger los contactos
   getContactos() {
     this.cService.getContactos().subscribe((resp) => {
       console.log(resp);
