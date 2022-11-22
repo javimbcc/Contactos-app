@@ -24,9 +24,9 @@ export class ContactosService {
     return this.http.get<any>(`https://reqres.in/api/users/${id}`);
   }
   //metodo para crear contactos de la API
-  postContacto(contact: contactos): Observable<contactos> {
+  postContacto(contact: any): Observable<contactos> {
     console.log("Contacto creado sin problemas");
-    return this.http.post<contactos>(`https://reqres.in/api/users`, contact);
+    return this.http.post<any>(`https://reqres.in/api/users`, contact);
   }
   //metodo para eliminar contactos de la API
   deleteContacto(id: number): Observable<any> {

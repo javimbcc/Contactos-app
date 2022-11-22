@@ -1,0 +1,9 @@
+<form [formGroup]="profileForm" (onSubmit)="submit()">
+  Nombre:
+  <input type="text" class="form-control" formControlName="first_name"/>
+  Apellido:
+  <input type="text" class="form-control" formControlName="last_name" /> Email:
+  <input type="text" class="form-control" formControlName="email" /> Avatar:
+  <input type="text" class="form-control" formControlName="avatar" />
+  <button class="btn btn-dark" type="submit">Enviar</button>
+</form>

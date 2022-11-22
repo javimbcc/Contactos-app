@@ -7,6 +7,9 @@ import { ListaContactosComponent } from './components/lista-contactos/lista-cont
 import { DetalleContactosComponent } from './components/detalle-contactos/detalle-contactos.component';
 import { DisplayerComponent } from './components/displayer/displayer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CrearContactoComponent } from './components/crear-contacto/crear-contacto.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
     ListaContactosComponent,
     DetalleContactosComponent,
     DisplayerComponent,
+    CrearContactoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
