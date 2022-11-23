@@ -25,6 +25,24 @@ export class DetalleContactosComponent implements OnInit {
     });
   }
 
+  deleteContactos() {
+    this.route.paramMap.subscribe((params) => {
+      let id = Number(params.get("id"));
+      this.cService.deleteContacto(id).subscribe((resp: any) => {
+        console.log(resp);
+      });
+    });
+  }
+
+  // updateContactos() {
+  //   this.route.paramMap.subscribe((params) => {
+  //     let id = Number(params.get("id"));
+  //     this.cService.updateContacto(this.listaContactos,id).subscribe((resp: any) => {
+  //       this.listaContactos = resp.data;
+  //     });
+  //   })
+  // }
+
   ngOnInit(): void {
     this.getContactos();
   }
